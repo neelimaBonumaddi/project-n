@@ -19,7 +19,7 @@ app.get('/', (req,res)=>{
 })
 
 app.get('/users',async(req,res)=>{
-    const result= await client.query('select * from customer');
+    const result= await client.query('select * from User');
     console.log(result.rows);
     res.send(JSON.stringify(result.rows))
 })
